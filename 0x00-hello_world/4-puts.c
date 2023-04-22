@@ -1,14 +1,13 @@
 #include <stdio.h>
 /**
- * main - 4-puts.c
- * description - Write a C program that prints exactly
+ * main - entry point
  *
  * return : always 0 (success)
  */
 int main(void
 		)
 {
-	puts("\"Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle");
 
 	return(0);
 }
