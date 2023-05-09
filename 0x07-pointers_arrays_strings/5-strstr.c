@@ -7,18 +7,24 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-			for (; *haystack != '\0'; haystack++)
-		{
-			char *I = haystack;
-			char *p = needle;
+		char *h, *n;
 
-			while (*I == p && *p != '\0')
-			{
-				I++;
-				p++;
-			}
-			if (*p == '\0')
-				return (haystack);
+				while (*haystack)
+		{
+				h = haystack;
+				n = needle;
+
+				while (*haystack && *n && (*haystack == *n))
+				{
+						haystack++;
+						n++;
+				}
+
+				if (!*n)
+					return (h);
+
+				haystack = h + 1;
 		}
-		return (0);
+
+		return (NULL);
 }
